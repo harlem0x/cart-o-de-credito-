@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card-container">
+        <div class="front">
+            <div class="image">
+                <!-- Imagens dos cartões com classes específicas para cada tipo -->
+                <img src="image/visa.png" alt="Visa" class="card-img visa" style="display: none;">
+                <img src="image/icon_amex.svg" alt="American Express" class="card-img amex" style="display: none;">
+                <img src="image/mc_vrt_opt_pos_46_1x.png" alt="MasterCard" class="card-img mastercard" style="display: none;">
+                <img src="image/generic-card.png" alt="Cartão Genérico" class="card-img generic" style="display: none;">
+            </div>
+            <div class="card-number-box">000 000 000 000</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span>Titular</span>
+                    <div class="card-holder-name">Nome</div>
+                </div>
+                <div class="box">
+                    <span>Data</span>
+                    <div class="expiration">
+                        <span class="exp-month">MM</span>
+                        <span class="exp-year">YY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>CVV</span>
+                <div class="cvv-box"></div>
+                <!-- As imagens dos cartões também aqui, com as mesmas classes -->
+                <img src="image/visa.png" alt="Visa" class="card-img visa" style="display: none;">
+                <img src="image/icon_amex.svg" alt="American Express" class="card-img amex" style="display: none;">
+                <img src="image/mc_vrt_opt_pos_46_1x.png" alt="MasterCard" class="card-img mastercard" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <form action="">
+        <div class="inputBox">
+            <span>Número do cartão</span>
+            <input type="text" maxlength="16" minlength="13" class="card-number-input" pattern="[0-9]{13,16}" placeholder="Digite o número do cartão" required>
+        </div>
+        <div class="inputBox">
+            <span>Nome do titular</span>
+            <input type="text" maxlength="30" class="card-holder-input" placeholder="Nome completo" required>
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>Expiração</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>Mês</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>Expiração</span>
+                <select name="" id="" class="year-input">
+                    <option value="year" selected disabled>Ano</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>CVV</span>
+                <input type="text" maxlength="4" class="cvv-input" placeholder="Digite o CVV" required>
+            </div>
+        </div>
+        <input type="submit" value="Enviar" class="submit-btn">
+    </form>
+
+</div>
+
+</body>
+</html>
